@@ -189,14 +189,14 @@ class Client(RawClient):
 
                         while True:
                             chunk_ = fp.read(part_size)
+                            if not chunk_:
+                                break
                             rpc = raw.functions.upload.SaveBigFilePart(
                                 file_id=new_file_id,
                                 file_part=file_part,
                                 file_total_parts=file_total_parts,
                                 bytes=chunk_
                             )
-                            if not chunk_:
-                                break
 
                             file_part_ += 1
                             file_part += 1
