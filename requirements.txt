@@ -1,0 +1,4 @@
+Pyrogram
+TgCrypto
+pyromod
+python-dotenv
